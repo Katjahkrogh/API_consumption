@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --colorSecondary: #0D0D0D;
+    --colorTextPrimay: #BFBFBF;
+
+    --colorHeader: #48735F;
+    --colorHeaderSecondary:#4F8C6F;
+    --colorPrimary: #404040;
+
+    --fontMain: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: var(--fontMain);
+    background-color: var(--colorPrimary);
+    color: var(--colorTextPrimay);
+}
+
+header {
+    h1 {
+        padding: 1rem;
+        background-color: var(--colorSecondary);
+
+        @media (min-width: 1023px) {
+        padding: 1.5rem;
+        font-size: 2.5rem;
+        }
+    }
+    nav {
+        ul {
+            display: grid;
+            list-style: none;
+            background-color: var(--colorHeaderSecondary);
+            padding: 0.5rem;
+    
+            @media (min-width: 768px) {
+                display: flex;
+                padding: 0rem 2rem;
+            }
+
+            li {
+                margin-right: 1rem;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    color: var(--colorSecondary);
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                    text-decoration: none;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        text-decoration: underline 1px solid var(--colorSecondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    padding: 1rem 2rem;
+    @media (min-width: 1023px) {
+        padding: 1rem 2rem;
+    }
+
+    #movies_container{
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 700px));
+        gap: 1rem;
+
+        article{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2{
+            background-color: var(--colorHeader);
+            padding: 0.5rem;
+        }
+
+        div{
+            display: grid;
+            background-color: var(--colorSecondary);
+
+            @media (min-width: 768px) {
+                display: flex;
+            }
+
+            span{
+                padding: 1rem;
+
+                p{
+                    margin-top: 2rem;
+
+                    &:nth-child(3){
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorSecondary);
+    padding: 1rem;
+
+    @media (min-width: 1023px) {
+        padding: 1.5rem;
+    }
+}
