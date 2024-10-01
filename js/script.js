@@ -51,5 +51,5 @@ document.getElementById("popular").addEventListener("click", () => fetchMovies("
 document.getElementById("top_rated").addEventListener("click", () => fetchMovies("top_rated"));
 document.getElementById("upcoming").addEventListener("click", () => fetchMovies("upcoming"));
 
-// Vis 'Now playing' film, når siden loader
-window.onload = () => fetchMovies("now_playing");
+// Fetch en kategori, som vises per default
+fetchMovies("top_rated");
